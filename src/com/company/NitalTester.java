@@ -101,17 +101,7 @@ public class NitalTester {
         System.out.println(isNital(n4));
         System.out.println(isNital(n5));
         System.out.println(isNital(n6));
+        System.out.println();
 
-
-//        int [] arr1 = {1,2,3};
-//        int [] arr2 = {3,1,2};
-//        int [] arr3 = {2,1,2};
-//        System.out.println(hasAllValues(arr1,arr2));
-//        System.out.println(hasAllValues(arr1,arr3));
-//        System.out.println(hasAllValues(arr3,arr2));
-//        int[] arr4 = {1,2,3,4,5,6};
-//        int[] arr5 = {3,2,1,2,3};
-//        System.out.println(containsRepeats(arr4));
-//        System.out.println(containsRepeats(arr5));
     }
 }
