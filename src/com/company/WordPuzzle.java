@@ -23,8 +23,9 @@ public class WordPuzzle {
      */
     public boolean toBeLabeled(int r, int c, boolean [][] blackBoxes){
         if (blackBoxes[r][c]){return false;}
-        if()
-        return true;    // replace this
+        if(r==0||c==0){return true;}
+        if(blackBoxes [r-1][c]||blackBoxes[r][c-1]){return true;}
+        return false;    // replace this
     }
 
     /* Write the WordPuzzle Constructor.  The constructor should initialize the
@@ -45,12 +46,18 @@ public class WordPuzzle {
      * @param blackBoxes - a 2D array of Boxes
      */
     public WordPuzzle(boolean [][] blackBoxes){
-
-
-        /* to be implemented in part b */
-
-
-
+        int count=0;
+        puzzle=new Box[blackBoxes.length][blackBoxes[0].length];
+        for(int i=0; i<blackBoxes.length; i++){
+            for(int j=0; j< blackBoxes[i].length; j++){
+                if(toBeLabeled(i,j,blackBoxes)){
+                    count++;
+                    puzzle[i][j]=new Box(false, count);
+                }
+                else if(!blackBoxes[i][j]){puzzle[i][j]= new Box(false, 0);}
+                else{puzzle[i][j]= new Box(true, 0);}
+            }
+        }
     }
 
 
