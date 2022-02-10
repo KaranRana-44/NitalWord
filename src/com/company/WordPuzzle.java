@@ -9,12 +9,6 @@ public class WordPuzzle {
      */
     private Box [][] puzzle;
 
-    /* Write the WordPuzzle method toBeLabeled().  The method returns true
-    if the box indexed by row r and column c in a word puzzle grid should be
-    labeled with a positive number according to the word puzzle labeling rule;
-    otherwise it returns false.  The parameter blackBoxes indicates which
-    squares in the word puzzle grid are black.
-     */
     /** Returns true if the square at row r, column c should be labeled
      * with a positive number, false otherwise.
      * The box at row r, column c is black if and only if blackBoxes[r][c]
@@ -27,14 +21,6 @@ public class WordPuzzle {
         if(blackBoxes [r-1][c]||blackBoxes[r][c-1]){return true;}
         return false;    // replace this
     }
-
-    /* Write the WordPuzzle Constructor.  The constructor should initialize the
-    puzzle grid to have the same dimensions as the parameter blackBoxes.
-    Each element of the puzzle grid should be initialized with a
-    reference to a Box object with the appropriate color and number.
-    The number is positive if the box is labeled and 0 if the box is not
-    labeled.
-     */
     /** Constructs a Word Puzzle grid.
      * Precondition: There is at least one row in blackBoxes
      * Postcondition:
@@ -58,6 +44,7 @@ public class WordPuzzle {
                 else{puzzle[i][j]= new Box(true, 0);}
             }
         }
+
     }
 
 
